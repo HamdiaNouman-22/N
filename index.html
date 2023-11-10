@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Barlow+Condensed&family=Cuprum&family=Days+One&family=Lato&family=Montserrat&family=Mooli&family=Open+Sans&family=Outfit&family=Oxygen&family=Playpen+Sans:wght@600&family=Poppins&family=Roboto:ital@0;1&family=Ubuntu&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="stylesheet" href="/responsivestyle.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+      background-color: hsl(235, 18%, 26%);
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .box {
+      width: 53rem;
+      height: 35rem;
+      margin-top: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 10px;
+      background-color: hsl(0, 0%, 100%);
+      border-radius: 2.4rem;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .col1 {
+      flex: 1;
+      margin-right: 20px;
+      margin-left: 70px;
+      margin-top: 20px;
+      flex-basis: 40%;
+    }
+
+    .col2 {
+      flex: 1;
+      margin-left: 1px;
+      margin-top: 12px;
+      margin-bottom: 12px;
+      flex-basis: 40%;
+    }
+
+    .btn {
+      width: 363px;
+      height: 49px;
+      padding: 10px;
+      border-radius: 0.5rem;
+      outline: hsl(234, 29%, 20%);
+      border: hsl(234, 29%, 20%);
+      background-color: hsl(234, 29%, 20%);
+      cursor: pointer;
+      color: hsl(0, 0%, 100%);
+      font-size: 16px;
+      font-weight: 400;
+      text-decoration: none;
+
+    }
+
+    .btn:hover,
+    .btn:focus {
+      background: linear-gradient(to right, rgb(202, 69, 91), rgb(239, 110, 17));
+      box-shadow: 0 0.2rem 1rem rgb(202, 69, 91);
+    }
+
+    #page2 .btn {
+      margin-top: 10px;
+    }
+
+    .m1 {
+      height: 32.05rem;
+      margin: 13px;
+      margin-right: -20px;
+    }
+
+    h1 {
+      font-family: system-ui;
+      font-weight: 700;
+      font-size: 48.8px;
+      color: hsl(234, 29%, 20%);
+      margin-bottom: 26px;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      margin-top: 0;
+    }
+
+    .m2 {
+      margin-right: 12px;
+      margin-top: 1px;
+    }
+
+    .m3 {
+      margin-top: 10px;
+      width: 330px;
+      margin-bottom: 20px;
+      border-radius: 0.5rem;
+      padding: 15px;
+      font-size: 16px;
+      font-weight: 400;
+      cursor: pointer;
+      border: 1px solid hsl(231, 23%, 89%);
+    }
+
+    .m3:hover,
+    .m3:focus {
+      /* border:2px solid hsl(231, 7%, 60%); */
+      outline: 2px solid hsl(235, 18%, 26%);
+    }
+
+    .container {
+      background-color: hsl(0, 0%, 100%);
+      width: 16.5rem;
+      height: 20rem;
+      margin: 100px auto;
+      border-radius: 1.75rem;
+      padding-top: 32px;
+      padding-left: 54px;
+      padding-right: 57px;
+      padding-bottom: 60px;
+    }
+
+    #page2 p {
+      font-size: 15px;
+      font-weight: 400;
+      margin-top: 6px;
+      margin-bottom: 21px;
+      display: inline;
+    }
+
+    #page2 img {
+      width: 48px;
+      height: 48px;
+      margin-bottom: -8px;
+    }
+
+    #page2 .btn {
+      width: 295px;
+      height: 49px;
+      padding: 10px;
+      border-radius: 0.5rem;
+      outline: hsl(234, 29%, 20%);
+      border: hsl(234, 29%, 20%);
+      background-color: hsl(234, 29%, 20%);
+      cursor: pointer;
+      color: hsl(0, 0%, 100%);
+      font-size: 16px;
+      font-weight: 400;
+      margin-left: -10px;
+
+    }
+
+    #alertmsg {
+      margin-top: 10px;
+      width: 330px;
+      margin-bottom: 20px;
+      border-radius: 0.5rem;
+      padding: 15px;
+      font-size: 16px;
+      font-weight: 400;
+      cursor: pointer;
+      border: 1px solid hsl(0, 78%, 47%);
+      color: red;
+
+    }
+
+    #alertmsg:hover,
+    #alertmsg:focus {
+      outline: none;
+    }
+
+    #alertmsg::placeholder {
+      color: hsl(0, 78%, 47%);
+    }
+
+    @media(max-width:375px) {
+
+      body {
+        background-color: hsl(0, 0%, 100%);
+        padding: 0;
+        margin: 0;
+      }
+
+      .box {
+        width: 100%;
+        height: 39rem;
+        margin: 0;
+      }
+
+      .row {
+        flex-direction: column;
+      }
+
+      .col1 {
+        order: 2;
+        width: 58rem;
+        height: 60rem;
+      }
+
+      h1 {
+        font-size: 100px;
+      }
+
+      p {
+        font-size: 50px;
+      }
+
+      .para {
+        width: 50rem;
+      }
+
+      .text {
+        margin-top: -10px;
+        height: 900px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+      }
+
+      .col2 {
+        order: 1;
+      }
+
+      .m1 {
+        background-image: none;
+        background-image: url(/assets/images/illustration-sign-up-mobile.svg);
+        background-size: cover;
+        width: 1010px;
+        height: 41rem;
+        margin-top: -54px;
+        margin-left: -10px;
+        margin-right: 0px;
+      }
+
+      .m3 {
+        width: 790px;
+        padding: 28px;
+        border-radius: 1rem;
+        font-size: 35px;
+      }
+
+      .btn {
+        width: 852px;
+        border-radius: 1rem;
+        font-size: 30px;
+        text-align: center;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        height: 80px;
+      }
+
+      #alertmsg {
+        width: 790px;
+        padding: 28px;
+        border-radius: 1rem;
+      }
+
+      .m4 {
+        font-size: 37px;
+      }
+
+      .input {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .attribution {
+        display: none;
+      }
+
+      #page2 h1 {
+        font-size: 50px;
+        margin-top: 2px;
+      }
+
+      .container {
+        margin-top: 60px;
+      }
+
+
+      #page2 img {
+        width: 80px;
+        height: 170px;
+      }
+
+      #page2 .btn {
+        margin-top: 180px;
+      }
+
+      #page2 p {
+        font-size: 18px;
+      }
+
+      .text2 {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sign-up form start -->
+  <div id="page1">
+    <div class="box">
+      <div class="row">
+        <div class="col1">
+          <div class="text">
+            <h1> Stay updated!</h1>
+            <p>Join 60,000+ product managers receiving monthly updates on:</p>
+            <div class="para">
+              <p><img src="/assets/images/icon-list.svg" alt="" class="m2">Product discovery and building what matters
+              </p>
+              <p><img src="/assets/images/icon-list.svg" alt="" class="m2"> Measuring to ensure updates are a success
+              </p>
+              <p><img src="/assets/images/icon-list.svg" alt="" class="m2"> And much more!</p><br>
+            </div>
+          </div>
+          <div class="input">
+            <div class="row">
+              <label for="email" class="m4">Email address</label>
+              <p id="error1" style="color: rgb(196, 21, 21);"></p>
+            </div>
+            <input type="email" class="m3 form-control" id="input-email" placeholder="email@company.com">
+            <button class="btn" onclick="checkinput()">Subscribe to monthly newsletter</button>
+          </div>
+        </div>
+        <div class="col2 "><img src="/assets/images/illustration-sign-up-desktop.svg" alt="" class="m1" id="image">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Success message end -->
+  <div id="page2">
+    <div class="container">
+      <img src="/assets/images/icon-success.svg" alt="" class="m5">
+      <!-- </div> -->
+      <h1>Thanks for subscribing!</h1>
+      <div class="text2">
+        <p style="display: inline">A confirmation email has been sent to
+        <div id="output" style="display: inline; margin-right: 2px;"></div>. Please open it and click the button inside
+        to
+        confirm your subscription.</p>
+      </div>
+      <button class="btn">Dismiss message</button>
+
+    </div>
+  </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Hamdia Nouman</a>.
+  </div>
+  <script src="/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
