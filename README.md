@@ -1,6 +1,6 @@
 # Frontend Mentor - Newsletter sign-up form with success message solution
 
-This is a solution to the [Newsletter sign-up form with success message challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv). 
+This is a solution to the [Newsletter sign-up form with success message challenge on Frontend Mentor](https://www.frontendmentor.io/solutions/newletter-sign-in-page-made-using-html-css-and-js-4-oCLicjYx) 
 
 ## Table of contents
 
@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: (https://www.frontendmentor.io/solutions/newletter-sign-in-page-made-using-html-css-and-js-4-oCLicjYx)
+- Live Site URL: (https://hamdianouman-22.github.io/Newsletter-sign-in/)
 
 ## My process
 
@@ -52,7 +52,7 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+- Website - (https://hamdianouman-22.github.io/Newsletter-sign-in/)
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
 
 
