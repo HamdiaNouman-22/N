@@ -53,6 +53,6 @@ Users should be able to:
 ## Author
 
 - Website - (https://hamdianouman-22.github.io/Newsletter-sign-in/)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@HamdiaNouman-22](https://www.frontendmentor.io/profile/yourusername)
 
 
