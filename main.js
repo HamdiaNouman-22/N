@@ -3,10 +3,8 @@ const elementid=document.getElementById("input-email");
 const getpage=document.getElementById("page2");
  getpage.style.display='none';
 function checkinput() {
-    console.log(inputemail.value);
     var str=inputemail.value;
 var char="@";
-    console.log(inputemail.value + "dd");
     var ans=str.indexOf(char);
     if(ans!=-1){
         elementid.id = "input-email";
@@ -24,12 +22,10 @@ var char="@";
         elementid.id = "alertmsg";
         showpage(1);
     }
-    console.log("finish");
 }
 
 function showpage(pagenum) {
     if (pagenum == 2) {
-        console.log(2);
         const page = document.getElementById("page1");
         page.style.display = 'none';
         const pagedisplay = document.getElementById("page2");
@@ -46,7 +42,6 @@ function showpage(pagenum) {
 }
 function output() {
     const outputitem = document.getElementById("output");
-    console.log(inputemail.value);
     outputitem.textContent = inputemail.value;
 
 }
